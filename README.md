@@ -4,18 +4,12 @@ The **full source code** is available for review, ensuring transparency and elim
 
 ---
 
-# 🚀 Features Overview  
-
-## 🔹 Enhanced Controls  
-- **Headset Control (Taskbar Quick-Access Buttons)**  
-  - 📢 **Maximum Volume** – Increases volume to maximum for when you set your headset down, ensuring you hear incoming calls.  
-  - 🎚 **Normal Volume** – Restores volume to a reasonable level (e.g., 40%) before answering a call.  
-  - ⏳ **Work in Progress:** Play/Pause Media  
+# 🚀 Features Overview
 
 ## 🔹 Automations  
 - **Quick Note Entry**  
   - Instantly inserts the current date and **Agent ID (`YOURNAME3`)** into the focused text box, for Texte/Info.  
-  - Cursor is automatically positioned for immediate note-taking.  
+  - Cursor is automatically positioned in the center for immediate note-taking.  
 
 ## 🔹 Hotkeys  
 - `F1` – Toggle focus between **Novomind** and **ASSD**  
@@ -56,6 +50,11 @@ The **full source code** is available for review, ensuring transparency and elim
 
 ### ⏳ **Work in Progress**  
 - **Auto-Fill Standard Guest Settings** *(Pending refinement.)*  
+## 🔹 Enhanced Controls  
+- **Headset Control (Taskbar Quick-Access Buttons)**  
+  - 📢 **Maximum Volume** – Increases volume to maximum for when you set your headset down, ensuring you hear incoming calls.  
+  - 🎚 **Normal Volume** – Restores volume to a reasonable level (e.g., 40%) before answering a call.  
+  - ⏳ **Work in Progress:** Play/Pause Media  
 
 ---
 
@@ -77,6 +76,7 @@ The **full source code** is available for review, ensuring transparency and elim
 ### ✅ Confirmed  
 - **Chat Response Templates Index**  
 - **Chat Response Buttons?** *(Pending further organization.)*  
+- Add extension numbers to hostel index for easy copy and paste
 
 ### 🤔 To Consider  
 - **Default notes in Texte Info?**  
