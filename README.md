@@ -1,92 +1,104 @@
 # 📌 Introduction  
-This is a collection of tools I've developed and consolidated into one package.  
-The full source code is available for review to ensure transparency and dispel any concerns regarding its inner workings.  
+This package consolidates a collection of tools and scripts I've developed to streamline workflows and improve efficiency.  
+The **full source code** is available for review, ensuring transparency and eliminating concerns about its inner workings.  
 
 ---
 
 # 🚀 Features Overview  
 
-## 🔹 Extra/Easier Controls  
-- **Headset Control (Single-click buttons attached to the taskbar)**  
-  - 📢 **Maximum Volume** – Increases volume when you set your headset down so you can hear incoming calls.  
+## 🔹 Enhanced Controls  
+- **Headset Control (Taskbar Quick-Access Buttons)**  
+  - 📢 **Maximum Volume** – Increases volume to maximum for when you set your headset down, ensuring you hear incoming calls.  
   - 🎚 **Normal Volume** – Restores volume to a reasonable level (e.g., 40%) before answering a call.  
   - ⏳ **Work in Progress:** Play/Pause Media  
 
 ## 🔹 Automations  
 - **Quick Note Entry**  
-  - Instantly inserts the current date and **Agent ID (`YOURNAME3`)** into Texte/Info.  
-  - Cursor is automatically positioned in the center for immediate note-taking.  
+  - Instantly inserts the current date and **Agent ID (`YOURNAME3`)** into the focused text box, for Texte/Info.  
+  - Cursor is automatically positioned for immediate note-taking.  
 
 ## 🔹 Hotkeys  
 - `F1` – Toggle focus between **Novomind** and **ASSD**  
-  - 📌 Information appears where your eyes are already looking, avoiding unnecessary head movement.  
-  - 🔄 If multiple windows are open, press `F1` a few times until Novomind is in focus.  
+  - 📌 Displays information where your eyes are already focused, reducing unnecessary head movement between two monitors just to confirm a booking number or date for example.  
+  - Work in Progress: Novomind window title should be **"Novomind iAGENT Desk - USERNAME"** to prevent known minor issues.
 - `F2` – Open/Focus on **Notepad**  
-  - ✍ Quickly start typing without using the mouse.  
+  - ✍ Instantly start typing without using the mouse.  
 - `Ctrl + Space` – **Simulated "Enter" Key**  
   - 💡 When pasting with `Ctrl + V`, keep holding `Ctrl` and press `Space` to simulate pressing `Enter`.  
-  - ✅ Avoids moving your hand off the mouse to confirm entries.  
+  - ✅ Prevents unnecessary hand movement between keyboard and mouse.  
 - `Ctrl + Left Click` – **Play/Pause Music**  
-  - 🎵 Answer calls without switching to the media player.  
+  - 🎵 Quickly pause media when answering calls without switching applications.  
 
 ### 🔹 Customizable Function Keys  
 - 🔧 `F6 & F7` – Configurable hotkeys for additional functionality.  
-- ❓ **Hotkey for Notepad?** *(To be determined.)*  
+- ❓ **Dedicated Notepad Hotkey?** *(To be determined.)*  
 
 ---
 
 # 🛠 ViolentMonkey Scripts  
-*(Supports both English & German elements where applicable.)*  
+*(Supports both English & German interfaces where applicable.)*  
 
 ## **ASSD Enhancements**  
 - **Auto Login**  
-  - 💡 Credentials are entered in MyToolkit before script generation.  
-  - 🔒 Credentials are automatically deleted after generation.  
-- **Auto Open Key Sections**  
-  - ✅ `Tagesübersicht` & `Reservations` open automatically.  
+  - 💡 Credentials are entered in **MyToolkit** before script generation.  
+  - 🔒 Credentials are automatically deleted post-generation.  
+- **Auto-Open Key Sections**  
+  - ✅ Automatically opens `Tagesübersicht` & `Reservations`.  
 - **Hostel Index**  
-  - 📋 View a sorted, searchable list of hostels by **name, house ID, or house number**.  
-  - 🔍 Use `Ctrl + S` to open/close search.  
-- **Auto Fill Standard Booking Settings** *(Reworded for clarity)*  
-  - 🏨 If no dates are set (e.g., when creating a new booking from the reservations tab), the system defaults to:  
+  - 📋 View a **sortable, searchable list** of hostels by **name, house ID, or house number**.  
+  - 🔍 Use `Ctrl + S` to open/close search and `Enter` to confirm selection.  
+- **Auto-Fill Standard Booking Settings**  
+  - 🏨 If no dates are set (e.g., creating a new booking from the **Reservations** tab), the system defaults to:  
     - **Arrival Date:** Today  
     - **Departure Date:** Tomorrow  
   - 📌 Automatically selects **FLEX** as the booking type.  
   - 🚀 Guest type is preselected in the background (on the second tab).  
 
-### ⏳ **Work In Progress**  
-- **Auto Fill Standard Guest Settings** *(Pending refinement.)*  
+### ⏳ **Work in Progress**  
+- **Auto-Fill Standard Guest Settings** *(Pending refinement.)*  
 
 ---
 
 # 🔧 Additional Features  
 - **Whitespace Removal Around Numbers**  
-  - 🧹 Automatically removes spaces when copying booking numbers.  
-- **Ctrl + Del Fix for Novomind**  
+  - 🧹 Automatically removes spaces before and after numbers when copying booking IDs to ensure correct searches in ASSD.  
+- **`Ctrl + Del` Fix for Novomind**  
   - ⌨ Enables **word-by-word deletion** as expected.  
 
 ---
 
-# 📂 To Categorize  
+# 📂 Miscellaneous  
 - `F4` – **Email Response Templates Index**  
+
+---
+
+# 🔮 Future Features  
+
+### ✅ Confirmed  
 - **Chat Response Templates Index**  
-- **Chat Response Buttons?** *(Needs further organization.)*  
+- **Chat Response Buttons?** *(Pending further organization.)*  
+
+### 🤔 To Consider  
+- **Default notes in Texte Info?**  
+  - Example: Auto-inserting placeholders like `Transaction ID: xxx; Email ID: xxx`  
+  - Possibly an `F4` search index similar to chat responses.  
+- Pressing headset button detects teams opening, minimizes it, switches to novomind, and answers the call. (need to dig up current, buggy implementation from months ago)
 
 ---
 
 # ⚙ Setup Instructions  
 
 ## 🔹 Function Key Configuration (For Laptops)  
-- If function keys (`F1–F12`) are secondary (e.g., default to volume control), update your **BIOS settings** to reverse this behavior.  
+- If function keys (`F1–F12`) default to media and other controls, update your **BIOS settings** to prioritize function key behavior.  
 
 ## 🔹 ViolentMonkey Extension  
-- Install **[ViolentMonkey](https://violentmonkey.github.io/)**, a free and open-source browser extension that runs custom scripts.  
-- All scripts provided here are **vetted for security** and optimized for efficiency.  
+- Install **[ViolentMonkey](https://violentmonkey.github.io/)**, a free and open-source browser extension for running custom scripts.  
+- All provided scripts are **vetted for security** and optimized for performance.  
 
 ---
 
 ## 📢 Future Improvements & Contributions  
-Have a suggestion or found a bug? Open an issue to share your feedback! 🚀  
+Have suggestions or found a bug? Open an issue to share your feedback! 🚀  
 
 --------------------------
 My Words:
