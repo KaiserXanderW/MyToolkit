@@ -1,5 +1,5 @@
-# Ignore everything by default
-# *
+# What to ignore
+dist
 
 # Allow README.md
 # !README.md
