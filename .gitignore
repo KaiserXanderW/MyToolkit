@@ -1,15 +1,12 @@
 # Ignore everything by default
 *
 
-# Allow specific files and directories
-!.gitignore
+# Allow README.md
 !README.md
-!src/  # Allows the "src" directory
-# !src/main.py  # Allows "main.py" inside "src"
-!config/settings.json  # Allows a specific file in another directory
 
-# Ignore everything inside allowed directories except allowed files
-src/*
-!src/main.py
-config/*
-!config/settings.json
+# Allow specific folder (e.g., "my_folder")
+!Resources/Violent Monkey Scripts Assets
+
+# Ignore everything inside my_folder except allowed files (optional)
+Resources/Violent Monkey Scripts Assets/*
+!Resources/Violent Monkey Scripts Assets/template_index.json.py
