@@ -7,6 +7,10 @@ except ImportError:
     pyautogui = None
 from . import config
 
+def update_username(new_username):
+    global username
+    username = new_username
+
 def insert_date_and_name():
     if config.ENABLE_HOTKEY_INSERT_DATE.get():
         # Format date as dd.mm.yy, e.g., "17.02.25"

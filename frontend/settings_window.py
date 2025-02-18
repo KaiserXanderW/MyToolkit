@@ -3,6 +3,7 @@ import tkinter as tk
 from tkinter import ttk
 import json
 import pyperclip
+from backend.insert_date_and_username import update_username
 
 # changed from material_switch to toggle_switch
 from .toggle_switch import ToggleSwitch
@@ -20,11 +21,15 @@ def load_user_settings():
         try:
             with open(settings_file, "r") as f:
                 settings = json.load(f)
+            config.USER_NAME = settings.get("username", "Alice")
+            update_username(config.USER_NAME)
             return settings
         except Exception as e:
             print("Error loading user settings:", e)
-    # Return default settings if file not found or error occurs
-    return {"username": "Alice", "other_info": ""}
+    default_settings = {"username": "Alice", "other_info": ""}
+    config.USER_NAME = default_settings["username"]
+    update_username(config.USER_NAME)
+    return default_settings
 
 def save_user_settings_to_file(settings):
     settings_file = get_settings_file_path()
@@ -212,6 +217,7 @@ def show_settings_window():
         save_user_settings_to_file(settings)
         # Update the global config so that other modules see the new username.
         config.USER_NAME = username_entry.get()
+        update_username(username_entry.get())
         print("User settings saved:", settings)
 
     save_btn = tk.Button(user_tab, text="Save Settings", command=save_user_settings,

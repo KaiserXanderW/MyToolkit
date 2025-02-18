@@ -3,8 +3,10 @@ import threading
 import tkinter as tk
 from win10toast import ToastNotifier
 from backend import config, whitespace_remover, insert_date_and_username, tray
+from frontend.settings_window import load_user_settings
 
 def main():
+    load_user_settings() # Load settings and update username
     icon_path = os.path.join(os.path.dirname(__file__), "Resources", "toolkit_icon.png")
     toaster = ToastNotifier()
     toaster.show_toast(
