@@ -1,0 +1,22 @@
+{
+  "appName": "MyToolkit",
+  "notificationRunning": "MyToolkit is running in the system tray.",
+  "removeWhitespaceLabel": "Remove whitespace",
+  "removeWhitespaceTooltip": "Automatically remove spaces from numeric clipboard text",
+  "switchBetweenNovomindAndASSD": "F1 switch between Novomind/ASSD",
+  "switchBetweenNovomindAndAssdTooltip": "F1 switches to either Novomind or ASSD, depending on which is focused",
+  "insertDateLabel": "F8 inserts date and name",
+  "insertDateTooltip": "When enabled, pressing F8 inserts the current date and username and places the text cursor in the center",
+  "desktopFunctionsTab": "Desktop Functions",
+  "browserScriptsTab": "Browser Scripts",
+  "instructionsToggleShow": "Show Instructions",
+  "instructionsToggleHide": "Hide Instructions",
+  "instructionsText": "To install Violentmonkey...",
+  "scriptOneTitle": "ASSD auto log in and daily overview/bookings opener",
+  "scriptOneTooltip": "This script logs you in...",
+  "scriptOneContent": "// Example browser script...",
+  "scriptTwoTitle": "Hostel index",
+  "scriptTwoTooltip": "This script displays a list of hostels...",
+  "scriptTwoContent": "// Another script...",
+  "closeButton": "Close"
+}
