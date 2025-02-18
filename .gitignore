@@ -1,0 +1,15 @@
+# Ignore everything by default
+*
+
+# Allow specific files and directories
+!.gitignore
+!README.md
+!src/  # Allows the "src" directory
+# !src/main.py  # Allows "main.py" inside "src"
+!config/settings.json  # Allows a specific file in another directory
+
+# Ignore everything inside allowed directories except allowed files
+src/*
+!src/main.py
+config/*
+!config/settings.json
