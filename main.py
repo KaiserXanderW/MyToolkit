@@ -5,6 +5,7 @@ from win10toast import ToastNotifier
 from backend import config, whitespace_remover, insert_date_and_username, tray
 from frontend.settings_window import load_user_settings
 from backend.toggle_novomind_assd import switch_novomind_assd
+from backend.toggle_phonetic_alphabet import setup_phonetic_hotkey
 
 def setup_hotkeys():
     def handle_f1(event):
@@ -39,6 +40,8 @@ def main():
     # Setup hotkeys in a separate thread
     hotkey_thread = threading.Thread(target=setup_hotkeys, daemon=True)
     hotkey_thread.start()
+
+    setup_phonetic_hotkey()
 
     # Keep the Tkinter event loop alive
     config.root.mainloop()
