@@ -208,13 +208,23 @@ def show_settings_window():
     other_entry.pack(padx=16, pady=(0, 16), fill="x")
     other_entry.insert(0, user_settings.get("other_info", ""))
 
+    # firstName field
+    firstname_label = tk.Label(user_tab, text="First Name\:", bg="black", fg="white")
+    firstname_label.pack(padx=16, pady=(0, 4), anchor="w")
+
+    firstname_entry = tk.Entry(user_tab, bg="#333333", fg="white", insertbackground="white")
+    firstname_entry.pack(padx=16, pady=(0, 16), fill="x")
+    firstname_entry.insert(0, user_settings.get("firstname", ""))
+
     # Save Settings button
     def save_user_settings():
         settings = {
             "username": username_entry.get(),
-            "other_info": other_entry.get()
+            "other_info": other_entry.get(),
+            "firstname": firstname_entry.get()  # new field
         }
         save_user_settings_to_file(settings)
+        config.USER_FIRSTNAME = settings["firstname"]
         # Update the global config so that other modules see the new username.
         config.USER_NAME = username_entry.get()
         update_username(username_entry.get())

@@ -1,12 +1,21 @@
 import os
 import threading
-import tkinter as tk
+import keyboard
 from win10toast import ToastNotifier
 from backend import config, whitespace_remover, insert_date_and_username, tray
 from frontend.settings_window import load_user_settings
+from backend.toggle_novomind_assd import switch_novomind_assd
+
+def setup_hotkeys():
+    def handle_f1(event):
+        switch_novomind_assd()
+        # Return False to prevent the default F1 behavior
+        return False
+
+    keyboard.on_press_key("F1", handle_f1, suppress=True)
 
 def main():
-    load_user_settings() # Load settings and update username
+    load_user_settings()  # Load settings and update username
     icon_path = os.path.join(os.path.dirname(__file__), "Resources", "toolkit_icon.png")
     toaster = ToastNotifier()
     toaster.show_toast(
@@ -26,6 +35,10 @@ def main():
     # System tray
     icon_thread = threading.Thread(target=tray.create_tray_icon, daemon=True)
     icon_thread.start()
+
+    # Setup hotkeys in a separate thread
+    hotkey_thread = threading.Thread(target=setup_hotkeys, daemon=True)
+    hotkey_thread.start()
 
     # Keep the Tkinter event loop alive
     config.root.mainloop()

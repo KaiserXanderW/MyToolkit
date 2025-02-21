@@ -3,6 +3,7 @@ import os
 import tkinter as tk
 
 APP_NAME = "myToolkit"  # changed from "MyToolkit"
+USER_FIRSTNAME = ""
 USER_NAME = "Alice"
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
